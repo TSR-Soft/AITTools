@@ -136,15 +136,15 @@ namespace AndromedaIT
                     {
                         /* Setup Client */
                         mClient.UseDefaultCredentials = false;
-                        mClient.Port = 587;
-                        mClient.Host = "mail.timeblock.com";
+                        mClient.Port = 23;
+                        mClient.Host = "<Server>";
 
                         /* Add recipients */
                         foreach (String MA in _MailTarget)
                             Mail.To.Add(new MailAddress(MA));
 
                         /* Set mail details */
-                        Mail.From = new System.Net.Mail.MailAddress("Debug@timeblock.com", "Debug API");
+                        Mail.From = new System.Net.Mail.MailAddress("<from-mail>", "Debug API");
                         Mail.Subject = Subject;
                         Mail.Body = Message;
 
